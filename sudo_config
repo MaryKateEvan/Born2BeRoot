@@ -1,7 +1,7 @@
-Defaults        passwd_tries=3
-Defaults        badpass_message="Bad password. Try again"
-Defaults        logfile="/var/log/sudo/sudo_config"
-Defaults        log_input, log_output
-Defaults        iolog_dir="/var/log/sudo"
-Defaults        requiretty
-Defaults        secure_path="/usr/local/sbin:/user/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+Defaults        passwd_tries=3 #sets the number of attempts a user has to enter their password correctly when using the sudo command to three
+Defaults        badpass_message="Bad password. Try again" #sets a custom error message to be displayed when a user enters an incorrect password when using the sudo command
+Defaults        logfile="/var/log/sudo/sudo_config" #specifies the location where sudo command logs will be stored
+Defaults        log_input, log_output #enables logging of both input and output for all sudo commands executed
+Defaults        iolog_dir="/var/log/sudo" #specifies the directory where sudo command logs for individual users will be stored.
+Defaults        requiretty #requires that the user executing the sudo command has a TTY (terminal) associated with their session
+Defaults        secure_path="/usr/local/sbin:/user/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" #sets the secure path environment variable for the sudo command, specifying the directories in which executable programs can be found when the sudo command is run
